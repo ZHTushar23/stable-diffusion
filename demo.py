@@ -7,7 +7,7 @@ pipe = StableDiffusionPipeline.from_pretrained(
 	use_auth_token=False
 ).to("cuda")
 
-prompt = "a photo of a model on red carpet"
+prompt = "a photograph of an astronaut riding a horse"
 with autocast("cuda"):
 	image = pipe(prompt)["images"][0]
 	print(type(image))
